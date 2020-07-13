@@ -1,0 +1,6 @@
+{
+  "emmet.includeLanguages": {},
+  "prettier.useTabs": true,
+  "prettier.semi": false,
+  "editor.formatOnSave": true
+}

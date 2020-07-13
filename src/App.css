@@ -1,0 +1,22 @@
+/* .Home-logo {
+  width: 500px;
+  height: 600px;
+} */
+
+#homeimg {
+  margin-top: 100px !important;
+}
+.welcomePage {
+  margin-top: 110px !important;
+}
+.signupFrom {
+  margin-top: 90px !important;
+  min-height: 100vh !important;
+}
+.aboutPage {
+  margin-top: 100px !important;
+  min-height: 100vh !important;
+}
+/* .Contact-logo {
+  margin-left: 400px !important;
+} */
