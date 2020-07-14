@@ -6,8 +6,14 @@
 #homeimg {
   margin-top: 100px !important;
 }
+#homeimgMobile {
+  margin-top: 150px !important;
+}
 .welcomePage {
   margin-top: 110px !important;
+}
+.welcomePageMobile {
+  margin-top: 100px !important;
 }
 .signupFrom {
   margin-top: 90px !important;
@@ -15,6 +21,10 @@
 }
 .aboutPage {
   margin-top: 100px !important;
+  min-height: 100vh !important;
+}
+.aboutPageMobile {
+  margin-top: 80px !important;
   min-height: 100vh !important;
 }
 /* .Contact-logo {

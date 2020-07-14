@@ -6,7 +6,7 @@ import home01 from "../images/home01.png";
 function Home() {
   return (
     <>
-      <section id="homeimg">
+      <section id="homeimg" className="d-none d-sm-block">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
@@ -25,7 +25,39 @@ function Home() {
                 <Link className=" badge badge-success p-2 mt-3" to="/signup">
                   SignUp Here
                 </Link>
-                <Link className=" badge badge-primary ml-3 p-2 mt-3" to="/login">
+                <Link
+                  className=" badge badge-primary ml-3 p-2 mt-3"
+                  to="/login"
+                >
+                  Login Here
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Home Page for Mobile */}
+
+      <section id="welcomePageMobile" className="d-block d-sm-none">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 welcomePage text-center">
+              <h1 className=" display-4 text-primary">
+                WELCOME to Readers Club...
+              </h1>
+              <p className="text-muted mt-3">
+                ...building your mental capacity is the greatest investment
+                ever!
+              </p>
+              <div className="mt-2">
+                <Link className=" badge badge-success p-2 mt-3" to="/signup">
+                  SignUp Here
+                </Link>
+                <Link
+                  className=" badge badge-primary ml-3 p-2 mt-3"
+                  to="/login"
+                >
                   Login Here
                 </Link>
               </div>
