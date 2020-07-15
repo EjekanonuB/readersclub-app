@@ -1,9 +1,11 @@
 import React from "react";
+import Title from "./Title";
 import vector13 from "../images/vector13.jpg";
 
 function Login() {
+
   return (
-    <>
+    <Title title = "Login">
       <section id="homeimg" className="d-none d-sm-block">
         <div className="container">
           <div className="row">
@@ -92,7 +94,7 @@ function Login() {
           </div>
         </div>
       </section>
-    </>
+    </Title>
   );
 }
 

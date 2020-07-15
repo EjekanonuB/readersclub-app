@@ -1,8 +1,11 @@
 import React from "react";
+import Title from "./Title";
+
 
 function Readersclub() {
+
   return (
-    <>
+    <Title title = "Readers Clubs">
       <div className="container aboutPage ">
         <div className="row ">
           <div className="col-md-12 ">
@@ -10,7 +13,7 @@ function Readersclub() {
           </div>
         </div>
       </div>
-    </>
+    </Title>
   );
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
+import Title from "./Title";
 
 function About() {
   return (
-    <>
+    <Title title="About">
       <div className="container aboutPage d-none d-sm-block">
         <div className="row ">
           <div className="col-md-12 ">
@@ -102,7 +103,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    </Title>
   );
 }
 

@@ -1,9 +1,12 @@
 import React from "react";
+import Title from "./Title";
+
 // import home01 from "../images/home01.png";
 
 function Signup() {
+
   return (
-    <>
+    <Title title = "Signup">
       <section>
         <div className="container d-none d-sm-block">
           <div className="row">
@@ -201,7 +204,7 @@ function Signup() {
           </div>
         </div>
       </section>
-    </>
+    </Title>
   );
 }
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import home01 from "../images/home01.png";
+import Title from "./Title";
 
 function Home() {
   return (
-    <>
+    <Title title="Home" wide={true}>
       <section id="homeimg" className="d-none d-sm-block">
         <div className="container">
           <div className="row">
@@ -65,7 +65,7 @@ function Home() {
           </div>
         </div>
       </section>
-    </>
+    </Title>
   );
 }
 

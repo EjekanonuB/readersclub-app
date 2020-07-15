@@ -1,9 +1,11 @@
 import React from "react";
+import Title from "./Title";
 import vector26 from "../images/vector26.jpg";
 
 function Contact() {
+
   return (
-    <>
+    <Title title = "Contact Us">
       <div className="container aboutPage d-none d-sm-block">
         <div className="row ">
           <div className="col-md-6 ">
@@ -156,7 +158,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </>
+    </Title>
   );
 }
 
