@@ -3,7 +3,7 @@ import Container from "./Container";
 
 function Title(props) {
   useEffect(() => {
-    document.title = `${props.title} | ReadersApp`;
+    document.title = `${props.title} | Readers Club App`;
     window.scrollTo(0, 0);
   }, [props.title]);
 
