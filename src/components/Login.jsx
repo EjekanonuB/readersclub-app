@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Title from "./Title";
 import vector13 from "../images/vector13.jpg";
+import Axios from "axios";
 
 function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      await Axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
+      console.log("You have successively logged in.");
+    } catch (e) {
+      console.log("there was an error...");
+    }
+  }
 
   return (
-    <Title title = "Login">
+    <Title title="Login">
       <section id="homeimg" className="d-none d-sm-block">
         <div className="container">
           <div className="row">
@@ -19,6 +35,7 @@ function Login() {
                     <small>Email</small>
                   </label>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email-register"
                     name="email"
                     class="form-control"
@@ -32,6 +49,7 @@ function Login() {
                     <small>Password</small>
                   </label>
                   <input
+                    onChange={(e) => setPassword(e.target.value)}
                     id="password-register"
                     name="password"
                     class="form-control"
@@ -40,6 +58,7 @@ function Login() {
                   />
                 </div>
                 <button
+                  onSubmit={handleSubmit}
                   type="submit"
                   class="py-3 mt-4 btn btn-lg btn-success btn-block"
                 >
@@ -63,6 +82,7 @@ function Login() {
                     <small>Email</small>
                   </label>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email-register"
                     name="email"
                     class="form-control"
@@ -76,6 +96,7 @@ function Login() {
                     <small>Password</small>
                   </label>
                   <input
+                    onChange={(e) => setPassword(e.target.value)}
                     id="password-register"
                     name="password"
                     class="form-control"
@@ -84,6 +105,7 @@ function Login() {
                   />
                 </div>
                 <button
+                  onSubmit={handleSubmit}
                   type="submit"
                   class="py-3 mt-4 btn btn-lg btn-success btn-block"
                 >

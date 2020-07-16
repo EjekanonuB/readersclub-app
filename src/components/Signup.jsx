@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Title from "./Title";
+import Axios from "axios";
 
 // import home01 from "../images/home01.png";
 
 function Signup() {
+  const [username, setUsername] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [country, setCountry] = useState();
+  const [profession, setProfession] = useState();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      await Axios.post("http://localhost:5000/create", {
+        username,
+        email,
+        password,
+        country,
+        profession,
+      });
+      console.log("User was successively created.");
+    } catch (e) {
+      console.log("there was an error...");
+    }
+  }
 
   return (
-    <Title title = "Signup">
+    <Title title="Signup">
       <section>
         <div className="container d-none d-sm-block">
           <div className="row">
@@ -21,6 +43,7 @@ function Signup() {
                     <small>Username</small>
                   </label>
                   <input
+                    onChange={(e) => setUsername(e.target.value)}
                     id="username-register"
                     name="username"
                     class="form-control"
@@ -35,6 +58,7 @@ function Signup() {
                     <small>Email</small>
                   </label>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     id="email-register"
                     name="email"
                     class="form-control"
@@ -49,6 +73,7 @@ function Signup() {
                     <small>Password</small>
                   </label>
                   <input
+                    onChange={(e) => setPassword(e.target.value)}
                     id="password-register"
                     name="password"
                     class="form-control"
@@ -65,6 +90,7 @@ function Signup() {
                     className="text-muted ml-3"
                     name="country"
                     id="country"
+                    onChange={(e) => setCountry(e.target.value)}
                   >
                     <option value="Select">Select</option>
                     <option value="Nigeria">Nigeria</option>
@@ -82,6 +108,7 @@ function Signup() {
                     className="text-muted ml-3"
                     name="country"
                     id="country"
+                    onChange={(e) => setProfession(e.target.value)}
                   >
                     <option value="Select">Select</option>
                     <option value="Physiotherapist">Physiotherapist</option>
@@ -94,6 +121,7 @@ function Signup() {
                 </div>
 
                 <button
+                  onSubmit={handleSubmit}
                   type="submit"
                   class="py-3 mt-4 btn btn-lg btn-success btn-block"
                 >
@@ -121,6 +149,7 @@ function Signup() {
                     <small>Username</small>
                   </label>
                   <input
+                    onChange={(e) => setUsername(e.target.value)}
                     id="username-register"
                     name="username"
                     class="form-control"
@@ -135,6 +164,8 @@ function Signup() {
                     <small>Email</small>
                   </label>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    v
                     id="email-register"
                     name="email"
                     class="form-control"
@@ -149,6 +180,7 @@ function Signup() {
                     <small>Password</small>
                   </label>
                   <input
+                    onChange={(e) => setPassword(e.target.value)}
                     id="password-register"
                     name="password"
                     class="form-control"
@@ -165,6 +197,7 @@ function Signup() {
                     className="text-muted ml-3"
                     name="country"
                     id="country"
+                    onChange={(e) => setCountry(e.target.value)}
                   >
                     <option value="Select">Select</option>
                     <option value="Nigeria">Nigeria</option>
@@ -182,6 +215,7 @@ function Signup() {
                     className="text-muted ml-3"
                     name="country"
                     id="country"
+                    onChange={(e) => setProfession(e.target.value)}
                   >
                     <option value="Select">Select</option>
                     <option value="Physiotherapist">Physiotherapist</option>
@@ -194,6 +228,7 @@ function Signup() {
                 </div>
 
                 <button
+                  onSubmit={handleSubmit}
                   type="submit"
                   class="py-3 mt-4 btn btn-lg btn-success btn-block"
                 >
