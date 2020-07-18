@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Title from "./Title";
 import Axios from "axios";
 
@@ -14,7 +15,7 @@ function Signup() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await Axios.post("http://localhost:5000/create", {
+      await Axios.post("http://localhost:5000/readers/register", {
         username,
         email,
         password,
@@ -23,7 +24,7 @@ function Signup() {
       });
       console.log("User was successively created.");
     } catch (e) {
-      console.log("there was an error...");
+      console.log("There was an error...");
     }
   }
 
@@ -37,7 +38,7 @@ function Signup() {
             </div> */}
 
             <div className="col-md-12 signupFrom mt-md-5">
-              <form action="/POST" method="/signup">
+              <form onSubmit={handleSubmit}>
                 <div class="form-group">
                   <label for="username-register" class="text-muted mb-1">
                     <small>Username</small>
@@ -46,10 +47,11 @@ function Signup() {
                     onChange={(e) => setUsername(e.target.value)}
                     id="username-register"
                     name="username"
+                    value={username}
                     class="form-control"
                     type="text"
                     placeholder="Pick a username"
-                    autocomplete="off"
+                    autocomplete="offnpm "
                   />
                 </div>
 
@@ -61,6 +63,7 @@ function Signup() {
                     onChange={(e) => setEmail(e.target.value)}
                     id="email-register"
                     name="email"
+                    value={email}
                     class="form-control"
                     type="text"
                     placeholder="you@example.com"
@@ -76,9 +79,11 @@ function Signup() {
                     onChange={(e) => setPassword(e.target.value)}
                     id="password-register"
                     name="password"
+                    value={password}
                     class="form-control"
                     type="password"
                     placeholder="Create a password"
+                    autocomplete="off"
                   />
                 </div>
 
@@ -89,6 +94,7 @@ function Signup() {
                   <select
                     className="text-muted ml-3"
                     name="country"
+                    value={country}
                     id="country"
                     onChange={(e) => setCountry(e.target.value)}
                   >
@@ -106,8 +112,9 @@ function Signup() {
                   </label>
                   <select
                     className="text-muted ml-3"
-                    name="country"
-                    id="country"
+                    name="profession"
+                    value={profession}
+                    id="profession"
                     onChange={(e) => setProfession(e.target.value)}
                   >
                     <option value="Select">Select</option>
@@ -121,12 +128,15 @@ function Signup() {
                 </div>
 
                 <button
-                  onSubmit={handleSubmit}
                   type="submit"
                   class="py-3 mt-4 btn btn-lg btn-success btn-block"
                 >
                   Signup For Reader's Club
                 </button>
+                <p className="text-center text-muted">
+                  Do you have a valid <small>Email?</small>{" "}
+                  <Link to="/login">Login Here</Link>
+                </p>
               </form>
             </div>
           </div>
@@ -143,7 +153,7 @@ function Signup() {
             </div> */}
 
             <div className="col-md-12 signupFrom mt-md-5">
-              <form action="/POST" method="/signup">
+              <form onSubmit={handleSubmit}>
                 <div class="form-group">
                   <label for="username-register" class="text-muted mb-1">
                     <small>Username</small>
@@ -152,10 +162,11 @@ function Signup() {
                     onChange={(e) => setUsername(e.target.value)}
                     id="username-register"
                     name="username"
+                    value={username}
                     class="form-control"
                     type="text"
                     placeholder="Pick a username"
-                    autocomplete="off"
+                    autocomplete="offnpm "
                   />
                 </div>
 
@@ -168,6 +179,7 @@ function Signup() {
                     v
                     id="email-register"
                     name="email"
+                    value={email}
                     class="form-control"
                     type="text"
                     placeholder="you@example.com"
@@ -183,9 +195,11 @@ function Signup() {
                     onChange={(e) => setPassword(e.target.value)}
                     id="password-register"
                     name="password"
+                    value={password}
                     class="form-control"
                     type="password"
                     placeholder="Create a password"
+                    autocomplete="off"
                   />
                 </div>
 
@@ -196,6 +210,7 @@ function Signup() {
                   <select
                     className="text-muted ml-3"
                     name="country"
+                    value={country}
                     id="country"
                     onChange={(e) => setCountry(e.target.value)}
                   >
@@ -213,7 +228,8 @@ function Signup() {
                   </label>
                   <select
                     className="text-muted ml-3"
-                    name="country"
+                    name="profession"
+                    value={profession}
                     id="country"
                     onChange={(e) => setProfession(e.target.value)}
                   >
@@ -228,12 +244,15 @@ function Signup() {
                 </div>
 
                 <button
-                  onSubmit={handleSubmit}
                   type="submit"
                   class="py-3 mt-4 btn btn-lg btn-success btn-block"
                 >
                   Signup For Reader's Club
                 </button>
+                <p className="text-center text-muted">
+                  Do you have a valid <small>Email?</small>{" "}
+                  <Link to="/login">Login Here</Link>
+                </p>
               </form>
             </div>
           </div>

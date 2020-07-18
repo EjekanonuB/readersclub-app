@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Title from "./Title";
 import vector13 from "../images/vector13.jpg";
 import Axios from "axios";
