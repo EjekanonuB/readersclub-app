@@ -51,7 +51,7 @@ function Signup() {
                     class="form-control"
                     type="text"
                     placeholder="Pick a username"
-                    autocomplete="offnpm "
+                    autocomplete="off"
                   />
                 </div>
 
@@ -245,9 +245,9 @@ function Signup() {
 
                 <button
                   type="submit"
-                  class="py-3 mt-4 btn btn-lg btn-success btn-block"
+                  class="py-3 mt-5 btn btn-sm btn-success btn-block"
                 >
-                  Signup For Reader's Club
+                  Signup
                 </button>
                 <p className="text-center text-muted">
                   Do you have a valid <small>Email?</small>{" "}

@@ -43,7 +43,7 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 welcomePage text-center">
-              <h1 className=" display-4 text-primary">
+              <h1 className=" display-5 text-primary">
                 WELCOME to Readers Club...
               </h1>
               <p className="text-muted mt-3">
